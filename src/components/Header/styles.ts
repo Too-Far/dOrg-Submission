@@ -4,18 +4,12 @@ export const useStyles = makeStyles((theme: Theme)=>
     createStyles({
         appBar: {
             zIndex: theme.zIndex.drawer +1,
+            backgroundColor: '#001147',
+            borderBottom: 'solid white 1px',
             transition: theme.transitions.create(['width', 'margin'], {
                 easing: theme.transitions.easing.sharp,
                 duration: theme.transitions.duration.leavingScreen,
             })
-        },
-        appBarShift: {
-            marginLeft: DRAWER_WIDTH,
-            width: `calc(100% - ${DRAWER_WIDTH}px)`,
-            transition: theme.transitions.create(['width', 'margin'],{
-                easing: theme.transitions.easing.sharp,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
         },
         toolbar: {
             flex: 1,
@@ -26,11 +20,12 @@ export const useStyles = makeStyles((theme: Theme)=>
         menuButton: {
             marginRight: 36,
         },
-        title: {
+        logo: {
             flex: 1,
             display: 'flex',
             flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
+            marginLeft: '20px'
         },
         hide: {
             display: 'none'

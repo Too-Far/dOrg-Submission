@@ -1,14 +1,27 @@
-import React, {FC} from 'react';
-  import {useStyles} from './styles.js';
+import React, {FC, ReactNode} from 'react';
+import clsx from 'clsx';
+import {CssBaseline} from '@material-ui/core'
+import Header from '../Header';
+import Footer from '../Footer'
+import {useStyles} from './styles';
 
   interface LayoutProps {
-    // Props go here
+    children: ReactNode;
   }
   
-  const Layout: FC<LayoutProps> = (props) => {
+  const Layout: FC<LayoutProps> = ({children}) => {
     const classes = useStyles()
     return (
-      <div>
+      <div className={classes.root}>
+        <CssBaseline />
+        <Header />
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          {children}
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
       )
   }
