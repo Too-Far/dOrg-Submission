@@ -1,14 +1,10 @@
 import React, {FC, ReactElement} from 'react';
 import {Flex, Box, Card} from 'rimble-ui';
 import ProjectMetaDisplay from '../ProjectMetaDisplay';
-import {useStyles} from './styles';
 
-  interface InnerLayoutProps {
-    // Props go here
-  }
   
-  const InnerLayout: FC<InnerLayoutProps> = (props): ReactElement => {
-    const classes = useStyles()
+  const InnerLayout: FC = (): ReactElement => {
+
     return (
       <>
       <Flex>

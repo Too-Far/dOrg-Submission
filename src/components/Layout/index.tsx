@@ -1,5 +1,4 @@
 import {FC, ReactNode} from 'react';
-import {CssBaseline} from '@material-ui/core'
 import Header from '../Header';
 import Footer from '../Footer'
 import {useStyles} from './styles';
@@ -12,7 +11,6 @@ import {useStyles} from './styles';
     const classes = useStyles()
     return (
       <div className={classes.root}>
-        <CssBaseline />
         <Header />
         <main className={classes.content}>
           <div className={classes.toolbar} />
