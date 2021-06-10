@@ -1,32 +1,14 @@
-import React, {FC, ReactElement} from 'react';
-import clsx from 'clsx'
+import {FC, ReactElement} from 'react';
 import {
   AppBar,
   Toolbar,
   CssBaseline,
-  Typography,
-  IconButton,
-  Tooltip,
 } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
 import LogoLight from '../LogoLight/index'
 import {useStyles} from './styles';
+import WalletConnection from '../WalletConnection';
 
-  interface HeaderProps {
-    open?: boolean;
-    handleMenuOpen?: ()=>void;
-    toggleTheme?: ()=>void;
-    useDefaultTheme?: boolean;
-  }
-  
-  const Header: FC<HeaderProps> = ({
-    open,
-    handleMenuOpen,
-    toggleTheme,
-    useDefaultTheme,
-  }): ReactElement => {
+  const Header: FC = (): ReactElement => {
     const classes = useStyles()
     return (
       <>
@@ -40,29 +22,7 @@ import {useStyles} from './styles';
             <div className={classes.logo}>
                 <LogoLight width='80px' height='50px'/>
             </div>
-            {/* <IconButton onClick={toggleTheme}>
-              {useDefaultTheme ? (
-                <Tooltip title='Switch to dark mode' placement='bottom'>
-                  <Brightness3Icon />
-                </Tooltip>
-              ): (
-                <Tooltip title='Switch to light mode' placement='bottom'>
-                  <Brightness7Icon />
-                </Tooltip>
-              )}
-            </IconButton> */}
-            <IconButton
-                  color="inherit"
-                  aria-label="open menu"
-                  onClick={handleMenuOpen}
-                  edge="start"
-                  className={clsx(classes.menuButton, {
-                    [classes.hide]: open,
-                  })}
-                  size="small"
-                  >
-                    <MenuIcon />
-                </IconButton>
+            <WalletConnection />
           </Toolbar>
         </AppBar>
       </>

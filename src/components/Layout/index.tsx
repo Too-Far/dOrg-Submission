@@ -1,5 +1,4 @@
-import React, {FC, ReactNode} from 'react';
-import clsx from 'clsx';
+import {FC, ReactNode} from 'react';
 import {CssBaseline} from '@material-ui/core'
 import Header from '../Header';
 import Footer from '../Footer'

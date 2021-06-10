@@ -11,7 +11,7 @@ export const lightTheme: Theme = createMuiTheme({
         secondary: {
             main: pink[300]
         }
-    }
+    },
 });
 
 export const darkTheme: Theme = createMuiTheme({
