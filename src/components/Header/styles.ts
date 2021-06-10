@@ -1,5 +1,5 @@
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
-import {DRAWER_WIDTH} from '../../utils/constants'
+
 export const useStyles = makeStyles((theme: Theme)=>
     createStyles({
         appBar: {
