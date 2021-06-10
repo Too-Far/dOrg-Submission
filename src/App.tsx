@@ -9,7 +9,7 @@ import {Web3ReactProvider} from '@web3-react/core'
 import {Web3Provider} from '@ethersproject/providers'
 import {InjectedConnector} from '@web3-react/injected-connector'
 import {lightTheme} from './theme/AppTheme'
-import InnerDialogue from '../src/components/InnerDialogue'
+import InnerLayout from '../src/components/InnerLayout'
 import Layout from '../src/components/Layout'
 
 export const injectedConnector = new InjectedConnector({
@@ -34,8 +34,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Layout>
-          <InnerDialogue/>
-
+          <InnerLayout />
         </Layout>
       </div>
     </ThemeProvider>
