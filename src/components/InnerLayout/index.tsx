@@ -1,6 +1,7 @@
 import {FC, ReactElement, useState} from 'react';
 import {Flex, Box, Card, Text} from 'rimble-ui';
 import ProjectMetaDisplay from '../ProjectMetaDisplay';
+import ProgressBar from '../ProgressBar';
 import {projectDetails} from '../../mockData/projectDetails'
 import TeamDisplay from '../TeamDisplay';
 
@@ -17,7 +18,11 @@ import TeamDisplay from '../TeamDisplay';
           <ProjectMetaDisplay data={data}/>
         </Box>
         <Box p={3} width={1/2} height={300} mb={4} justifyContent='center'>
-        <Card maxWidth={'90%'} height={'90%'} m={'auto'}>Card 2</Card>
+        <Card maxWidth={'100%'} height={300} m={'auto'} bg='teal' borderRadius={10}>
+          <Box width={'100%'} height={'auto'}>
+          <ProgressBar data={data['mileStones']}/>
+          </Box>
+        </Card>
         </Box>
       </Flex>
       <Flex>
