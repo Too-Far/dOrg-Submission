@@ -1,37 +1,37 @@
-import image from './milkyway.jpeg'
 function randomDateGenerator(start:Date, end:Date): Date{
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
 }
+
+const mileStoneMap = new Map<string, object>();
+mileStoneMap.set('design', {complete: true})
+mileStoneMap.set('mockUp', {complete: true})
+mileStoneMap.set('initialBuildout', {complete: true})
+mileStoneMap.set('bugTesting', {complete: false})
+mileStoneMap.set('turnover', {complete: false})
 
 
 
 export const projectDetails: object = {
     title: "Test Project",
     description: "Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. lad schooner scallywag dance the hempen jig ",
-    mileStones: {
-        design: randomDateGenerator(new Date(2022, 1, 1), new Date()),
-        mockUp: randomDateGenerator(new Date(2022, 2, 2), new Date()),
-        initialBuildout: randomDateGenerator(new Date(2022, 3, 3), new Date()),
-        bugTesting: randomDateGenerator(new Date(2022, 4, 4), new Date()),
-        turnover: randomDateGenerator(new Date(2022, 6, 6), new Date())
-    },
+    mileStones: mileStoneMap,
     team: [
         {
             name: 'Jane Doe',
-            specialty: ['Project Lead', 'Frontend', 'Back End', 'Smart Contracts'],
+            specialties: ['Project Lead', 'Frontend', 'Back End', 'Smart Contracts'],
             contact: 'gogetem@gmail.com',
         },
         {
             name: 'John Doe',
-            specialty: ['Frontend', 'Smart Contracts'],
+            specialties: ['Frontend', 'Smart Contracts'],
         },
         {
             name: 'Betty Boop',
-            specialty: ['Designer', 'Frontend'],
+            specialties: ['Designer', 'Frontend'],
         },
         {
             name: 'John James Rambo',
-            specialty: ['Taking Names']
+            specialties: ['Taking Names']
         }
     ],
     costBreakdown: {

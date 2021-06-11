@@ -1,29 +1,35 @@
-import React, {FC, ReactElement, useState} from 'react';
+import {FC, ReactElement, useState} from 'react';
 import {Flex, Box, Card, Text} from 'rimble-ui';
 import ProjectMetaDisplay from '../ProjectMetaDisplay';
+import ProgressBar from '../ProgressBar';
 import {projectDetails} from '../../mockData/projectDetails'
+import TeamDisplay from '../TeamDisplay';
 
   
   const InnerLayout: FC = (): ReactElement => {
     const [data] = useState(projectDetails)
-    console.log(data)
 
 
     return (
       <>
       <Text as='h1' color='white' fontSize={'2vw'} textAlign='center'>{data['title']}</Text>
       <Flex>
-        <Box p={3} width={1/2} height={300}  justifyContent='center'>
+        <Box p={3} width={1/2} height={300}  justifyContent='center' mb={4}>
           <ProjectMetaDisplay data={data}/>
         </Box>
-        <Box p={3} width={1/2} height={300} >
-        <Card maxWidth={'90%'} height={'90%'} m={'auto'}>Card 2</Card>
+        <Box p={3} width={1/2} height={300} mb={4} justifyContent='center'>
+        <Card maxWidth={'100%'} height={300} m={'auto'} bg='teal' borderRadius={10}>
+          <Box width={'100%'} height={'auto'}>
+          <ProgressBar data={data['mileStones']}/>
+          </Box>
+        </Card>
         </Box>
       </Flex>
       <Flex>
-        <Box p={3} width={1/3} height={300} bg='teal'></Box>
-        <Box width={1/3}></Box>
-        <Box p={3} width={1/3} height={300} bg='yellow'></Box>
+        <Box p={3} width={1/2} height={300} mb={4} justifyContent='center' overflow={'scroll'}>
+        <TeamDisplay data={data} />
+        </Box>
+        <Box p={3} width={1/2} height={300} bg='yellow'></Box>
       </Flex>
       </>
       )

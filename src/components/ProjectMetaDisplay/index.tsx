@@ -1,5 +1,5 @@
-import React, {FC, ReactElement} from 'react';
-import {Card, Text, Progress,Flex, Box, Heading} from 'rimble-ui'
+import {FC, ReactElement} from 'react';
+import {Card, Text, Heading} from 'rimble-ui'
 
 
   interface ProjectMetaDisplayProps {

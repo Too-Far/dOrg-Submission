@@ -1,9 +1,9 @@
-import React, {FC, ReactElement} from 'react';
+import {FC, ReactElement} from 'react';
   import {useStyles} from './styles';
   import {FOOTER_TEXT} from '../../utils/constants'
 
   
-  const Footer: FC = (props): ReactElement => {
+  const Footer: FC = (): ReactElement => {
     const classes = useStyles()
     return (
       <div className={classes.footerWrapper}>
