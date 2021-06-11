@@ -1,5 +1,5 @@
-import React, {FC, ReactElement} from 'react';
-import {Card, Heading, Text, Box} from 'rimble-ui';
+import {FC, ReactElement} from 'react';
+import {Card, Heading} from 'rimble-ui';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
