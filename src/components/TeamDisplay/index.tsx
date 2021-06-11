@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import TeamMemberCard from '../TeamMemberCard';
-  import {useStyles} from './styles';
+import {useStyles} from './styles';
 
   interface TeamDisplayProps {
     data: object;

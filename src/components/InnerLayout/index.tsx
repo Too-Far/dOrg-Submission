@@ -1,4 +1,4 @@
-import React, {FC, ReactElement, useState} from 'react';
+import {FC, ReactElement, useState} from 'react';
 import {Flex, Box, Card, Text} from 'rimble-ui';
 import ProjectMetaDisplay from '../ProjectMetaDisplay';
 import {projectDetails} from '../../mockData/projectDetails'
@@ -7,7 +7,6 @@ import TeamDisplay from '../TeamDisplay';
   
   const InnerLayout: FC = (): ReactElement => {
     const [data] = useState(projectDetails)
-    console.log(data)
 
 
     return (
