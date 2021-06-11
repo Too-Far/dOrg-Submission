@@ -18,20 +18,20 @@ export const projectDetails: object = {
     team: [
         {
             name: 'Jane Doe',
-            specialty: ['Project Lead', 'Frontend', 'Back End', 'Smart Contracts'],
+            specialties: ['Project Lead', 'Frontend', 'Back End', 'Smart Contracts'],
             contact: 'gogetem@gmail.com',
         },
         {
             name: 'John Doe',
-            specialty: ['Frontend', 'Smart Contracts'],
+            specialties: ['Frontend', 'Smart Contracts'],
         },
         {
             name: 'Betty Boop',
-            specialty: ['Designer', 'Frontend'],
+            specialties: ['Designer', 'Frontend'],
         },
         {
             name: 'John James Rambo',
-            specialty: ['Taking Names']
+            specialties: ['Taking Names']
         }
     ],
     costBreakdown: {
