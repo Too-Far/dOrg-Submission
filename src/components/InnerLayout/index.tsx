@@ -1,19 +1,20 @@
-import React, {FC, ReactElement} from 'react';
-import {Flex, Box, Card} from 'rimble-ui';
+import React, {FC, ReactElement, useState} from 'react';
+import {Flex, Box, Card, Text} from 'rimble-ui';
 import ProjectMetaDisplay from '../ProjectMetaDisplay';
-import {useStyles} from './styles';
+import {projectDetails} from '../../mockData/projectDetails'
 
-  interface InnerLayoutProps {
-    // Props go here
-  }
   
-  const InnerLayout: FC<InnerLayoutProps> = (props): ReactElement => {
-    const classes = useStyles()
+  const InnerLayout: FC = (): ReactElement => {
+    const [data] = useState(projectDetails)
+    console.log(data)
+
+
     return (
       <>
+      <Text as='h1' color='white' fontSize={'2vw'} textAlign='center'>{data['title']}</Text>
       <Flex>
         <Box p={3} width={1/2} height={300}  justifyContent='center'>
-          <ProjectMetaDisplay/>
+          <ProjectMetaDisplay data={data}/>
         </Box>
         <Box p={3} width={1/2} height={300} >
         <Card maxWidth={'90%'} height={'90%'} m={'auto'}>Card 2</Card>

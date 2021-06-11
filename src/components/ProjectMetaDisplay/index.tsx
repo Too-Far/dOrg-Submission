@@ -1,17 +1,19 @@
 import React, {FC, ReactElement} from 'react';
-import {Card, Text} from 'rimble-ui'
-  import {useStyles} from './styles';
+import {Card, Text, Progress,Flex, Box, Heading} from 'rimble-ui'
+
 
   interface ProjectMetaDisplayProps {
-    // Props go here
+    data: object
   }
   
-  const ProjectMetaDisplay: FC<ProjectMetaDisplayProps> = (props): ReactElement => {
-    const classes = useStyles()
+  const ProjectMetaDisplay: FC<ProjectMetaDisplayProps> = ({data}): ReactElement => {
+
     return (
-      <Card maxWidth={'90%'} height={'90%'} m={'auto'} bg='teal' color='white' border='none'>
-        <Text textAlign={'left'} as='h1'>Project Title:</Text>
-        <Text textAlign={'left'} as='h2'>Title Goes Here</Text>
+      <Card maxWidth={'90%'} height={300} m={'auto'} bg='teal' color='white' border='none' px={0} borderRadius={10}>
+        <Heading as={'h1'} mt={0}>Your Project</Heading>
+        <Text textAlign={'left'} as='h1'>Project Title: {data['title']}</Text>
+        <Text textAlign={'left'} as='p' overFlow={'hidden'}>Description:</Text>
+        <Text textAlign={'left'} as='p'>{data['description']}</Text>
       </Card>
       )
   }
