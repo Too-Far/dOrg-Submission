@@ -9,9 +9,9 @@ import {useStyles} from './styles';
 import WalletConnection from '../WalletConnection';
 
   interface Check {
-    now: string
+    Gone: string
   }
-  const Header: FC<Check> = ({now}): ReactElement => {
+  const Header: FC<Check> = ({Gone}): ReactElement => {
     const classes = useStyles()
     return (
       <>
