@@ -1,22 +1,24 @@
-import React, {FC, ReactElement} from 'react';
-import {Card, Text, Heading} from 'rimble-ui'
+import React, { ReactElement } from 'react';
+import { Typography, Card } from '@material-ui/core';
+import { useStyles } from './styles';
 
+interface ProjectMetaDisplayProps {
+    data: object;
+}
 
-  interface ProjectMetaDisplayProps {
-    data: object
-  }
-  
-  const ProjectMetaDisplay = ({data}:ProjectMetaDisplayProps): ReactElement => {
+const ProjectMetaDisplay = ({ data }: ProjectMetaDisplayProps): ReactElement => {
+    const classes = useStyles();
 
     return (
-      <Card maxWidth={'90%'} height={300} m={'auto'} bg='teal' color='white' border='none' px={0} borderRadius={10}>
-        <Heading as={'h1'} mt={0}>Your Project</Heading>
-        <Text textAlign={'left'} as='h1'>Project Title: {data['title']}</Text>
-        <Text textAlign={'left'} as='p' overFlow={'hidden'}>Description:</Text>
-        <Text textAlign={'left'} as='p'>{data['description']}</Text>
-      </Card>
-      )
-  }
-  
-  export default ProjectMetaDisplay
-  
+        <Card className={classes.card}>
+            <Typography variant="h4" className={classes.text}>
+                Your Project
+            </Typography>
+            <Typography className={classes.text}>Project Title: {data['title']}</Typography>
+            <Typography className={classes.text}>Description:</Typography>
+            <Typography className={classes.text}>{data['description']}</Typography>
+        </Card>
+    );
+};
+
+export default ProjectMetaDisplay;
