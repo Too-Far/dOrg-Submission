@@ -52,6 +52,11 @@
       "react-app/jest"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
+  },
   "lint-staged": {
     "*.{ts, tsx, js}": [
       "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
