@@ -52,13 +52,8 @@
       "react-app/jest"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.ts": [
+    "*.{ts, tsx}": [
       "yarn lint",
       "prettier --write"
     ]
