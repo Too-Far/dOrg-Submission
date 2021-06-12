@@ -57,7 +57,10 @@
     }
   },
   "lint-staged": {
-    "*.ts": "lint"
+    "*.ts": [
+      "eslint '*/**/*.{js,ts,tsx}'",
+      "prettier --write"
+    ]
   },
   "browserslist": {
     "production": [
