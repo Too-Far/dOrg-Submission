@@ -8,7 +8,10 @@ import LogoLight from '../LogoLight/index'
 import {useStyles} from './styles';
 import WalletConnection from '../WalletConnection';
 
-  const Header = (): ReactElement => {
+  interface Check {
+    hello: string
+  }
+  const Header: FC<Check> = ({hello}): ReactElement => {
     const classes = useStyles()
     return (
       <>
