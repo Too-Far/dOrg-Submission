@@ -1,13 +1,14 @@
 import React, {FC, ReactElement, useState, useEffect} from 'react';
 import StepProgressBar from 'react-step-progress';
-import {Heading, Text} from 'rimble-ui';
-import 'react-step-progress/dist/index.css';import {useStyles} from './styles';
+import {Heading, Text, Card} from 'rimble-ui';
+import 'react-step-progress/dist/index.css';
+import {useStyles} from './styles';
 
   interface ProgressBarProps {
       data: any;
   }
   
-  const ProgressBar: FC<ProgressBarProps> = ({data}): ReactElement => {
+  const ProgressBar = ({data}:ProgressBarProps): ReactElement => {
     const classes = useStyles()
     const [loading, setLoading] = useState<boolean>(true)
     const [start, setStart] = useState<number>(0)
@@ -36,13 +37,14 @@ import 'react-step-progress/dist/index.css';import {useStyles} from './styles';
 
     return (
       <>
-      <Heading as='h1' color='white' textAlign='center'>Project Progress</Heading>
+      <Card  height={300} m={'auto'} bg='teal' color='white' border='none' px={0} borderRadius={10}>
+      <Heading as='h1' color='white'>Project Progress</Heading>
       {!loading ?
       <StepProgressBar
         wrapperClass={classes.wrapper}
         contentClass={classes.subTitle}
         buttonWrapperClass={classes.hidden}
-        startingStep={4}
+        startingStep={start}
         onSubmit={()=>console.log('')}
         steps={[
           {
@@ -73,6 +75,7 @@ import 'react-step-progress/dist/index.css';import {useStyles} from './styles';
         ]}/> :
         <h1>Loading...</h1>
       }
+      </Card>
         </>
       )
   }

@@ -1,4 +1,4 @@
-import {FC, ReactElement} from 'react';
+import React, {FC, ReactElement} from 'react';
 import {
   AppBar,
   Toolbar,
@@ -8,7 +8,7 @@ import LogoLight from '../LogoLight/index'
 import {useStyles} from './styles';
 import WalletConnection from '../WalletConnection';
 
-  const Header: FC = (): ReactElement => {
+  const Header = (): ReactElement => {
     const classes = useStyles()
     return (
       <>

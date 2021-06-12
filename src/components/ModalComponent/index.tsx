@@ -1,4 +1,4 @@
-import {FC, ReactElement, ReactNode} from 'react';
+import React, {FC, ReactElement, ReactNode} from 'react';
 import {Box, Modal, Card} from 'rimble-ui';
 
   interface ModalComponentProps {
@@ -6,7 +6,7 @@ import {Box, Modal, Card} from 'rimble-ui';
     children: ReactNode;
   }
   
-  const ModalComponent: FC<ModalComponentProps> = ({open, children}): ReactElement => {
+  const ModalComponent = ({open, children}:ModalComponentProps): ReactElement => {
 
     return (
       <Box p={4}>

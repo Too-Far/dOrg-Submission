@@ -1,4 +1,4 @@
-import {FC, ReactNode} from 'react';
+import React, {FC, ReactNode} from 'react';
 import Header from '../Header';
 import Footer from '../Footer'
 import {useStyles} from './styles';
@@ -7,7 +7,7 @@ import {useStyles} from './styles';
     children: ReactNode;
   }
   
-  const Layout: FC<LayoutProps> = ({children}) => {
+  const Layout = ({children}:LayoutProps) => {
     const classes = useStyles()
 
     return (

@@ -5,7 +5,7 @@ import {Card, Avatar, Flex, Text, Box, Pill, Button} from 'rimble-ui'
     info: object;
   }
   
-  const TeamMemberCard: FC<TeamMemberCardProps> = ({info}): ReactElement => {
+  const TeamMemberCard = ({info}:TeamMemberCardProps): ReactElement => {
     return (
       <Card width={1} mb={2} borderRadius={10} bg='#001147'>
       <Flex flexDirection={'row'}>

@@ -1,4 +1,4 @@
-import {FC, ReactElement, useEffect, useState} from 'react';
+import React, {FC, ReactElement, useEffect, useState} from 'react';
 import { useWeb3React } from '@web3-react/core';
 import {Heading, Text, Flex, Box, Loader, Card, Image, Button} from 'rimble-ui';
 import ModalComponent from '../ModalComponent';
@@ -10,7 +10,7 @@ import {CHAIN_MAP} from '../../utils/constants'
     setOpen: any;
   }
   
-  const IncorrectNetworkModal: FC<IncorrectNetworkModalProps> = ({open, setOpen}): ReactElement => {
+  const IncorrectNetworkModal = ({open, setOpen}:IncorrectNetworkModalProps): ReactElement => {
     const {chainId} = useWeb3React()
     const [chain, setChain] = useState<string>()
     const closeModal = ()=>{

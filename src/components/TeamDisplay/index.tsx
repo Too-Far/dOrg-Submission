@@ -1,4 +1,4 @@
-import {FC, ReactElement} from 'react';
+import React, {FC, ReactElement} from 'react';
 import {Card, Heading} from 'rimble-ui';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
@@ -10,7 +10,7 @@ import {useStyles} from './styles';
     data: object;
   }
   
-  const TeamDisplay: FC<TeamDisplayProps> = ({data}): ReactElement => {
+  const TeamDisplay = ({data}:TeamDisplayProps): ReactElement => {
     const classes = useStyles()
     const sliderSettings ={
       dots: true,
@@ -22,7 +22,7 @@ import {useStyles} from './styles';
       swipeToSlide: true
     }
     return (
-      <Card maxWidth={'90%'} height={280} m={'auto'} bg='teal' color='white' border='none' px={0} borderRadius={10}>
+      <Card maxWidth={'90%'} height={300} m={'auto'} bg='teal' color='white' border='none' px={0} borderRadius={10}>
       <Heading as={'h1'} mt={0} mb={1}>Meet Your Team!</Heading>
         <Slider {...sliderSettings} className={classes.slider}>
       {data['team'].map((member, index)=>(
