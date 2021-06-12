@@ -13,5 +13,10 @@ export const useStyles = makeStyles((theme: Theme) =>
         bottom: {
             marginTop: '3em',
         },
+        text: {
+            color: 'white',
+            fontSize: '3vw',
+            marginBottom: '1em',
+        },
     }),
 );
