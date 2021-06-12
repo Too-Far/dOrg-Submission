@@ -43,7 +43,8 @@
     "eject": "react-scripts eject",
     "create-component": "node scripts/createComponent/createComponent.js",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
