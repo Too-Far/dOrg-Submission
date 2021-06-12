@@ -53,8 +53,8 @@
     ]
   },
   "lint-staged": {
-    "*.{ts, tsx}": [
-      "yarn lint",
+    "*.{ts, tsx, js}": [
+      "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
       "prettier --write"
     ]
   },
