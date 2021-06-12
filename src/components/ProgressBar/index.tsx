@@ -1,53 +1,48 @@
 import React, {FC, ReactElement, useState, useEffect} from 'react';
 import StepProgressBar from 'react-step-progress';
+import {Heading, Text} from 'rimble-ui';
 import 'react-step-progress/dist/index.css';import {useStyles} from './styles';
 
   interface ProgressBarProps {
-    data: object;
+      data: any;
   }
   
   const ProgressBar: FC<ProgressBarProps> = ({data}): ReactElement => {
     const classes = useStyles()
-    console.log(data)
+    const [loading, setLoading] = useState<boolean>(true)
     const [start, setStart] = useState<number>(0)
-    const step1Content = <h1>Design</h1>;
-    const step2Content = <h1>Mockup</h1>;
-    const step3Content = <h1>Initial Buildout</h1>;
-    const step4Content = <h1>Bug Testing</h1>;
-    const step5Content = <h1>Turnover</h1>
+    const step1Content = <Text as='p' color='white'>We are currently perfecting your design</Text>;
+    const step2Content = <Text as='p' color='white'>We are cooking up your design mockup, prepare to be inspired!</Text>;
+    const step3Content = <Text as='p' color='white'>Our developers are burning up the keyboards building your project!</Text>;
+    const step4Content = <Text as='p' color='white'>Now the fun part, lets squash some bugs!</Text>;
+    const step5Content = <Text as='p' color='white'>Like a shiny new car, your app is all yours!</Text>
 
-    // function step2Validator(){
-    //   return design.complete;
-    // }
-    // function step3Validator(){
-    //   return mockup.complete;
-    // }
-    // function step4Validation(){
-    //   return initialBuildout.complete;
-    // }
-    // function step5Validation(){
-    //   return bugTesting.complete && turnover.complete;
-    // }
-    let i = 0
-      const getLatestComplete =()=>{
-        console.log('called function')
-        for (let [key, value] of data){
-          console.log(value.complete)
-          console.log(value)
-          if(value.complete === false){
-            setStart(i)
-          }
-          i++
+    const getLatestComplete =()=>{
+      let i = 0;
+      for(let [key, value] of data.entries()){
+        if(value.complete === false){
+          setStart(i)
+          setLoading(false)
+          break;
         }
+        i++
       }
+    }
+
     useEffect(() => {
       getLatestComplete()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-
     return (
+      <>
+      <Heading as='h1' color='white' textAlign='center'>Project Progress</Heading>
+      {!loading ?
       <StepProgressBar
-        startingStep={start}
+        wrapperClass={classes.wrapper}
+        contentClass={classes.subTitle}
+        buttonWrapperClass={classes.hidden}
+        startingStep={4}
         onSubmit={()=>console.log('')}
         steps={[
           {
@@ -75,7 +70,10 @@ import 'react-step-progress/dist/index.css';import {useStyles} from './styles';
             name: 'Turnover',
             content: step5Content,
           }
-        ]}/>
+        ]}/> :
+        <h1>Loading...</h1>
+      }
+        </>
       )
   }
   

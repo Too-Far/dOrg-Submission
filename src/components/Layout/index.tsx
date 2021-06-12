@@ -9,6 +9,7 @@ import {useStyles} from './styles';
   
   const Layout: FC<LayoutProps> = ({children}) => {
     const classes = useStyles()
+
     return (
       <div className={classes.root}>
         <Header />

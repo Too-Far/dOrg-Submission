@@ -8,7 +8,7 @@ createStyles({
         flex:1,
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh'
+        height: '100%'
     },
     content: {
         flexGrow: 1,
