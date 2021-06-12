@@ -1,4 +1,4 @@
-import {FC, ReactElement, useState, useEffect} from 'react';
+import React, {FC, ReactElement, useState, useEffect} from 'react';
 import {useWeb3React} from '@web3-react/core';
 import {Web3Provider} from '@ethersproject/providers';
 import {InjectedConnector} from '@web3-react/injected-connector'
@@ -15,7 +15,7 @@ export const injectedConnector = new InjectedConnector({
   ]
 })
   
-  const WalletConnection: FC = (): ReactElement => {
+  const WalletConnection = (): ReactElement => {
     const {chainId, activate, active} = useWeb3React<Web3Provider>()
  
     const [, setCurrentNetwork] = useState<string>()

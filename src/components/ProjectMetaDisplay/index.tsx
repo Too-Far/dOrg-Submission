@@ -1,4 +1,4 @@
-import {FC, ReactElement} from 'react';
+import React, {FC, ReactElement} from 'react';
 import {Card, Text, Heading} from 'rimble-ui'
 
 
@@ -6,7 +6,7 @@ import {Card, Text, Heading} from 'rimble-ui'
     data: object
   }
   
-  const ProjectMetaDisplay: FC<ProjectMetaDisplayProps> = ({data}): ReactElement => {
+  const ProjectMetaDisplay = ({data}:ProjectMetaDisplayProps): ReactElement => {
 
     return (
       <Card maxWidth={'90%'} height={300} m={'auto'} bg='teal' color='white' border='none' px={0} borderRadius={10}>

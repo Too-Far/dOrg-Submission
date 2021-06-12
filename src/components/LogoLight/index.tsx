@@ -1,11 +1,11 @@
-import {FC, ReactElement} from 'react';
+import React, {FC, ReactElement} from 'react';
 
   interface LogoLightProps {
     height?: string;
     width?: string;
   }
   
-  const LogoLight: FC<LogoLightProps> = ({width, height}): ReactElement => {
+  const LogoLight = ({width, height}:LogoLightProps): ReactElement => {
     return (
      <>
 <svg width={width} height={height} viewBox="0 0 184 88" version="1.1" xmlns="http://www.w3.org/2000/svg">

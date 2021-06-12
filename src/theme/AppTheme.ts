@@ -1,10 +1,10 @@
-import {createMuiTheme, Theme} from '@material-ui/core/styles';
+import { createMuiTheme, Theme } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 
 export const lightTheme: Theme = createMuiTheme({
     typography: {
-        "fontFamily": 'spartan'
-    }
+        fontFamily: 'spartan',
+    },
 });
 
 export const darkTheme: Theme = createMuiTheme({
@@ -14,7 +14,7 @@ export const darkTheme: Theme = createMuiTheme({
             main: '#fc5a8d',
         },
         secondary: {
-            main: blue[500]
+            main: blue[500],
         },
     },
 });

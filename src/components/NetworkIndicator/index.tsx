@@ -1,4 +1,4 @@
-import {FC, ReactElement, useState, useEffect} from 'react';
+import React, {FC, ReactElement, useState, useEffect} from 'react';
 import { useWeb3React } from '@web3-react/core';
 import {Flex, Text, Icon} from 'rimble-ui';
 import {CHAIN_MAP} from '../../utils/constants'
@@ -9,7 +9,7 @@ import IncorrectNetworkModal from '../IncorrectNetworkModal';
     requiredNetwork: number;
   }
   
-  const NetworkIndicator: FC<NetworkIndicatorProps> = ({currentNetwork, requiredNetwork}): ReactElement => {
+  const NetworkIndicator = ({currentNetwork, requiredNetwork}:NetworkIndicatorProps): ReactElement => {
     const {chainId, account} = useWeb3React()
     const [network, setNetwork] = useState<string>()
     const [match, setMatch] = useState<boolean>()
