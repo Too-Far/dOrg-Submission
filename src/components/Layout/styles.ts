@@ -12,7 +12,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         content: {
             flexGrow: 1,
-            padding: theme.spacing(3),
+            // padding: theme.spacing(3),
+            margin: 0,
             minHeight: `calc(100vh - ${FOOTER_HEIGHT}px)`,
             background: theme.palette.background.paper,
             backgroundColor: '#001147',
