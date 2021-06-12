@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme: Theme) =>
             backgroundColor: 'teal',
             color: 'white',
             borderRadius: '10px',
-            padding: 8,
+            padding: '2em',
         },
     }),
 );

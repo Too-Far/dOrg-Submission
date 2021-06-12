@@ -16,4 +16,14 @@ export const useStyles = makeStyles({
     label: {
         color: 'white',
     },
+    card: {
+        height: 300,
+        backgroundColor: 'teal',
+        color: 'white',
+        borderRadius: '10px',
+        padding: '2em',
+    },
+    text: {
+        marginTop: '1em',
+    },
 });
