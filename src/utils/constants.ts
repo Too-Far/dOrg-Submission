@@ -9,5 +9,5 @@ export const CHAIN_MAP = new Map<number, string>([
     [3, 'ropsten'],
     [63, 'mordor'],
     [4, 'rinkeby'],
-    [100, 'xDai']
-])
+    [100, 'xDai'],
+]);

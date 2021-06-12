@@ -43,7 +43,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create-component": "node scripts/createComponent/createComponent.js",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "eslintConfig": {
     "extends": [
@@ -58,7 +59,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "eslint '*/**/*.{js,ts,tsx}'",
+      "yarn lint",
       "prettier --write"
     ]
   },
