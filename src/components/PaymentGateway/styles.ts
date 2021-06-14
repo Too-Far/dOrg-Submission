@@ -7,4 +7,7 @@ export const useStyles = makeStyles({
     btn: {
         marginTop: '2em',
     },
+    title: {
+        marginTop: 0,
+    },
 });

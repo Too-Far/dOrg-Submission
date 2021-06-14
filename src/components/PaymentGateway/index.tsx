@@ -19,7 +19,9 @@ const PaymentGateway = (): ReactElement => {
         <div>
             <Grid container justify="flex-end" className={classes.wrapper}>
                 <Grid item>
-                    <Typography variant="h4">Make a Payment</Typography>
+                    <Typography variant="h4" className={classes.title}>
+                        Make a Payment
+                    </Typography>
                     <Button variant="outlined" className={classes.btn} onClick={handlePayment}>
                         Pay With Crypto
                     </Button>
