@@ -26,5 +26,6 @@ export const useStyles = makeStyles({
     },
     specialties: {
         marginLeft: '3em',
+        marginBottom: '0.5em',
     },
 });

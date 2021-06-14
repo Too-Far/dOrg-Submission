@@ -12,7 +12,7 @@ const PaymentGateway = (): ReactElement => {
     const { account, library } = useWeb3React();
 
     const handlePayment = () => {
-        console.log('click');
+        alert('This is where the connection is for xDai payments');
     };
 
     return (

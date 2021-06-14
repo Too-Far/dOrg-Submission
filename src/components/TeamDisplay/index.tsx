@@ -18,7 +18,6 @@ const TeamDisplay = ({ data }: TeamDisplayProps): ReactElement => {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        adaptiveHeight: true,
         swipeToSlide: true,
     };
     return (
