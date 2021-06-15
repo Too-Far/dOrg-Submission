@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/dOrg-Submission/static/js/main.af94c929.chunk.js",
+    "main.js.map": "/dOrg-Submission/static/js/main.af94c929.chunk.js.map",
+    "runtime-main.js": "/dOrg-Submission/static/js/runtime-main.c0bcf553.js",
+    "runtime-main.js.map": "/dOrg-Submission/static/js/runtime-main.c0bcf553.js.map",
+    "static/css/2.11e50ae9.chunk.css": "/dOrg-Submission/static/css/2.11e50ae9.chunk.css",
+    "static/js/2.b8aaa679.chunk.js": "/dOrg-Submission/static/js/2.b8aaa679.chunk.js",
+    "static/js/2.b8aaa679.chunk.js.map": "/dOrg-Submission/static/js/2.b8aaa679.chunk.js.map",
+    "static/js/3.868b6387.chunk.js": "/dOrg-Submission/static/js/3.868b6387.chunk.js",
+    "static/js/3.868b6387.chunk.js.map": "/dOrg-Submission/static/js/3.868b6387.chunk.js.map",
+    "index.html": "/dOrg-Submission/index.html",
+    "static/css/2.11e50ae9.chunk.css.map": "/dOrg-Submission/static/css/2.11e50ae9.chunk.css.map",
+    "static/js/2.b8aaa679.chunk.js.LICENSE.txt": "/dOrg-Submission/static/js/2.b8aaa679.chunk.js.LICENSE.txt",
+    "static/media/MetaMaskIcon.4368e45a.svg": "/dOrg-Submission/static/media/MetaMaskIcon.4368e45a.svg",
+    "static/media/slick-theme.css": "/dOrg-Submission/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0bcf553.js",
+    "static/css/2.11e50ae9.chunk.css",
+    "static/js/2.b8aaa679.chunk.js",
+    "static/js/main.af94c929.chunk.js"
+  ]
+}
