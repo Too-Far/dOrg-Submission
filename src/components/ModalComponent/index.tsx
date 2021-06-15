@@ -1,25 +1,20 @@
-import React, {FC, ReactElement, ReactNode} from 'react';
-import {Box, Modal, Card} from 'rimble-ui';
+import React, { FC, ReactElement, ReactNode } from 'react';
+// import {Box, Modal, Card} from 'rimble-ui';
+import { Grid, Modal, Card, Dialog } from '@material-ui/core';
+import { useStyles } from './styles';
 
-  interface ModalComponentProps {
+interface ModalComponentProps {
     open: boolean;
     children: ReactNode;
-  }
-  
-  const ModalComponent = ({open, children}:ModalComponentProps): ReactElement => {
+}
 
+const ModalComponent = ({ open, children }: ModalComponentProps): ReactElement => {
+    const classes = useStyles();
     return (
-      <Box p={4}>
-        <Box>
-          <Modal isOpen={open}>
-            <Card width={'420px'} p={0}>
-                {children}
-            </Card>
-          </Modal>
-        </Box>
-      </Box>
-      )
-  }
-  
-  export default ModalComponent
-  
+        <Dialog className={classes.modal} open={open}>
+            <Card className={classes.innerCard}>{children}</Card>
+        </Dialog>
+    );
+};
+
+export default ModalComponent;

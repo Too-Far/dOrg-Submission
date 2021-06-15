@@ -4,4 +4,10 @@ export const useStyles = makeStyles({
         width: '100%',
         textAlign: 'center',
     },
+    btn: {
+        marginTop: '2em',
+    },
+    title: {
+        marginTop: 0,
+    },
 });

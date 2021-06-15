@@ -52,6 +52,9 @@
             "react-app/jest"
         ]
     },
+    "eslintIgnore": [
+        "README.md"
+    ],
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
