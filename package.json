@@ -2,6 +2,7 @@
     "name": "client-dashboard",
     "version": "0.1.0",
     "private": true,
+    "homepage": " https://too-far.github.io/",
     "dependencies": {
         "@ethersproject/units": "^5.3.0",
         "@material-ui/core": "^4.11.4",
@@ -23,6 +24,7 @@
         "eslint-plugin-react": "^7.24.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "ethers": "^5.3.0",
+        "gh-pages": "^3.2.1",
         "lint-staged": "^11.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -41,6 +43,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -b master -d build",
         "create-component": "node scripts/createComponent/createComponent.js",
         "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
         "format": "prettier --write \"src/**/*.ts\"",
@@ -53,7 +57,8 @@
         ]
     },
     "eslintIgnore": [
-        "README.md"
+        "README.md",
+        "yarn.lock"
     ],
     "husky": {
         "hooks": {
